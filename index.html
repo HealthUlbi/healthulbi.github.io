@@ -9,6 +9,15 @@
     <script type="module" crossorigin src="/assets/index-B4xae8S3.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-FgNoJ53z.css">
   </head>
+  <script>
+  (function() {
+    if (sessionStorage.redirect) {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      window.history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
   <body>
     <div id="root"></div>
 
